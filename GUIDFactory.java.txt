@@ -1,0 +1,23 @@
+package com.jericho.shared.comp.common.identity;
+
+public class GUIDFactory
+{
+	public static GUID createGUID(String identifier)
+	{
+		if(identifier != null)
+		{
+			return new GUID(identifier);
+		}
+		return null;
+	}
+	
+	public static GUID createGUID(GUID guid, String identifier)
+	{
+		if(guid != null)
+		{
+			return new GUID(guid.getStringValue()+"."+identifier);
+		}
+		return GUIDFactory.createGUID(identifier);
+	}
+	
+}

@@ -1,0 +1,13 @@
+package com.jericho.shared.comp.common.identity;
+
+public class GUID extends ImmutableIdentifier
+{
+	private static final long serialVersionUID = 1L;
+
+	//package protected
+	GUID(String identifier)
+	{
+		super(identifier);
+	}
+
+}
